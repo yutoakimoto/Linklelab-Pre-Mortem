@@ -29,7 +29,8 @@ const LoadingScreen: React.FC = () => {
     <div className="flex flex-col items-center justify-center py-20 animate-pulse">
       <div className="w-16 h-16 border-4 border-red-900 border-t-red-500 rounded-full animate-spin mb-8"></div>
       <h3 className="text-2xl font-cinzel text-red-500 mb-2">Simulating Future Timeline</h3>
-      <p className="font-mono text-slate-400 text-sm">>> {log}</p>
+      {/* Fixed: Escape '>' characters for JSX compatibility */}
+      <p className="font-mono text-slate-400 text-sm">&gt;&gt; {log}</p>
     </div>
   );
 };
